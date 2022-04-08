@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>lab10</title>
+        
+		<!--put your external stylesheet links here-->
+		<link rel="stylesheet" href="css/styles.css">
+		<!-- link to leaflet styles -->
+		<link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css" />
+		<!-- link to leaflet scripts -->
+		<script type="text/javascript" src="lib/leaflet/leaflet.js"></script>
+
+		<!--you can also place internal styles here; you would place these within <style> tags-->
+    </head>
+
+    <body>
+        <!--put your initial page content here-->
+		<div id="div1">
+			<p><b>Q2</b>: The function is first looking at the data from the Amtrack URL. The conditional statement is checking if the data type is "Point".
+			If it is a "Point", then it must be styled with the stylistic elements outlined (colour, border, radius...etc.). It adds a circle with a specified
+			fill colour and border to each bus station. </p>
+			<p><b>Q3</b>: <i>Canadian Stations are in Cyan.</i>  </p>
+			<p><b>Q4</b>: Here <i>feature</i> refers to the data of each point/feature from our raw data (URL we refer to), while <i>Layers</i> refers to anything stylistic 
+			that appears on the map (this includes popups, polygons or circles, coloring..etc.). Here we are creating a new layer which includes the popups, and binding/adding this
+			to the feature layer, in order to have a popup that shows information related to the proper feature.</p>
+			<p><b>Q5</b>: <i>layer.options.fill</i> returns a <u>Boolean</u> value (true/false), where it 'checks' if this feature is set to true or false (will
+			the circles be filled?). <i>layer.getLatLng()</i> returns an <u>Object</u>, which contains the numercial values for Latitude and Longitude. </p>
+			<p><b>Q6</b>: The fill on the circles is now gone. As well the circle radius increased to 80, and is now huge. </p>
+			<br><br>
+			<div id="mapdiv">
+		</div>
+		<select class="li-nav" name="mapdropdown" id="mapdropdown" onChange="loadMap(this.value);">
+		<option value="map0" selected="selected" disabled>Load a map</option>
+		<option value='mapa'>Amtrack Stations</option>
+		<option value='mapb'>Megacities</option>
+		</select>
+		
+        <!--you can also use this space for internal scripts; you would place these within <script> tags-->
+
+        
+		
+		<!--put your external script links here-->
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
